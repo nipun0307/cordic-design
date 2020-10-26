@@ -8,10 +8,12 @@ list_angles = [1.107148,0.785398,0.463647,0.244978,0.124354,0.06241881,
 import numpy as np
 max_count=len(list_angles)
 
+import math
+
 def compute_angle(x,y,sum_of_angles,count,tan):
     rotation_direction = -1 if (y>0) else 1
     if(count==max_count):
-        print("value of y is: ",y)
+        #print("value of y is: ",y)
         return sum_of_angles
     else:
         #transforming current x,y:
@@ -30,3 +32,5 @@ angle=compute_angle(x,y,0,0,2)
 
 #printing angle in degrees, not implemented in the processor:
 print("\nAngle in radians: ",angle)
+
+print("Expected angle is: ", math.atan(y/x))
