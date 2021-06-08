@@ -1,1 +1,1 @@
-# cordic-design
+# CORDIC Processor
